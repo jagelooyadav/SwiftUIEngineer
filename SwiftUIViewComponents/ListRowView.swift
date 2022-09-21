@@ -25,8 +25,6 @@ public struct ListRowView: View {
         self.subtitle = subtitle
         self.content = content
         self.thumbURL = thumbURL
-        print("thumb url === \(thumbURL)")
-        print("title === \(title)")
     }
     
     public var body: some View {
@@ -48,9 +46,9 @@ public struct ListRowView: View {
             VStack {
                 //https://sample-videos.com/img/Sample-png-image-100kb.png
                 AsyncImage(url: URL(string: thumbURL ?? "")) { image in
-                    image.resizable(resizingMode: .tile).frame(width: 90.0, height: 90.0).padding([.leading, .bottom], 10.0).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
+                    image.resizable(resizingMode: .tile).frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
                 } placeholder: {
-                    Color.gray.opacity(0.1).frame(width: 90.0, height: 90.0).padding([.leading, .bottom], 10.0).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
+                    Color.gray.opacity(0.1).frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
                 }
                 Spacer()
             }

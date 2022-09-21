@@ -10,6 +10,8 @@ import Foundation
 class HomePageViewModel: ObservableObject {
     
     @Published var rows: [ListRowViewModel] = []
+    @Published var selectedRowId: Int = -1
+    @Published var isNavigationActive: Bool = false
     
     private let service: HomePageDataProvider
     

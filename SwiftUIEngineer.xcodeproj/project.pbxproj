@@ -30,6 +30,7 @@
 		AEF3CA0E28DB787700506492 /* HomePageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0628DB5ADF00506492 /* HomePageData.swift */; };
 		AEF3CA1028DB937200506492 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0F28DB937200506492 /* Padding.swift */; };
 		AEF3CA1328DBA32E00506492 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */; };
+		AEF3CA1628DBC93300506492 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1528DBC93300506492 /* DetailPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		AEF3CA0B28DB650F00506492 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		AEF3CA0F28DB937200506492 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		AEF3CA1528DBC93300506492 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,12 +177,12 @@
 		AE26175828DAF8C0009EDE3F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AEF3CA0528DB5AA300506492 /* Model */,
+				AEF3CA1428DBC87A00506492 /* View */,
 				AEF3CA1128DBA30A00506492 /* ViewModel */,
 				AEF3CA0828DB5DA100506492 /* Service */,
-				AEF3CA0528DB5AA300506492 /* Model */,
 				AEF3CA0228DB529C00506492 /* apistub.json */,
 				AE26175928DAF8C0009EDE3F /* SwiftUIEngineerApp.swift */,
-				AE26175A28DAF8C0009EDE3F /* HomePageView.swift */,
 				AE26175B28DAF8C2009EDE3F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -267,6 +269,15 @@
 				AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AEF3CA1428DBC87A00506492 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE26175A28DAF8C0009EDE3F /* HomePageView.swift */,
+				AEF3CA1528DBC93300506492 /* DetailPage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +515,7 @@
 				AE26178328DAF8C2009EDE3F /* HomePageView.swift in Sources */,
 				AEF3CA0E28DB787700506492 /* HomePageData.swift in Sources */,
 				AE26178128DAF8C2009EDE3F /* SwiftUIEngineerApp.swift in Sources */,
+				AEF3CA1628DBC93300506492 /* DetailPage.swift in Sources */,
 				AEF3CA0D28DB784F00506492 /* HomePageService.swift in Sources */,
 				AEF3CA1328DBA32E00506492 /* HomePageViewModel.swift in Sources */,
 			);
