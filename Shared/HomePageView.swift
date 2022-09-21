@@ -23,7 +23,7 @@ struct HomePageView: View {
                 List {
                     ForEach($viewModel.rows, id:\.rowId) { row in
                         ListRowView(title: row.title.wrappedValue, subtitle: row.subtitle.wrappedValue, content: row.content
-                            .wrappedValue).listRowSeparator(.hidden)
+                            .wrappedValue, thumbURL: row.thumbURL.wrappedValue).listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0.0, trailing: 0))
                     }
                 }.listStyle(.plain)

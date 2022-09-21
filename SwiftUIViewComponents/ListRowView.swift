@@ -8,16 +8,25 @@
 import Foundation
 import SwiftUI
 
-/// Intentially avoiding this view  to bind with any model/view model so that it can be used with any domain model/view model. This is independent reusable component
+/// Intentially avoiding this view  to bind with any model/view model so that it can be used with any domain model/view model. This is independent reusable component. Component library does not know any domain model
 public struct ListRowView: View {
     private var title: String
     private var subtitle: String?
     private var content: String?
+    private var thumbURL: String?
     
-    public init(title: String, subtitle: String? = nil, content: String? = nil) {
+    enum ThumSize {
+        static let width: CGFloat = 90.0
+        static let height: CGFloat = 90.0
+    }
+    
+    public init(title: String, subtitle: String? = nil, content: String? = nil, thumbURL: String?) {
         self.title = title
         self.subtitle = subtitle
         self.content = content
+        self.thumbURL = thumbURL
+        print("thumb url === \(thumbURL)")
+        print("title === \(title)")
     }
     
     public var body: some View {
@@ -34,7 +43,20 @@ public struct ListRowView: View {
     
     private func createView() -> some View {
         HStack {
+            // Add thumb
+            
+            VStack {
+                //https://sample-videos.com/img/Sample-png-image-100kb.png
+                AsyncImage(url: URL(string: thumbURL ?? "")) { image in
+                    image.resizable(resizingMode: .tile).frame(width: 90.0, height: 90.0).padding([.leading, .bottom], 10.0).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
+                } placeholder: {
+                    Color.gray.opacity(0.1).frame(width: 90.0, height: 90.0).padding([.leading, .bottom], 10.0).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
+                }
+                Spacer()
+            }
+
             VStack(alignment: .leading, spacing: Padding.small.rawValue) {
+                // Add title
                 HStack {
                     Text(title).font(Font.title3)
                         .foregroundColor(Color.blue.opacity(0.9)).bold()
@@ -42,6 +64,7 @@ public struct ListRowView: View {
                 }.padding(.leading, .standard)
                 .padding(.top, .small)
                 
+                // Add subtitle if needed
                 if let subtitle = self.subtitle {
                     HStack {
                         Text(subtitle).font(Font.subheadline)
@@ -50,6 +73,7 @@ public struct ListRowView: View {
                     }.padding(.leading, .standard)
                 }
                 
+                // Add content if needed
                 if let subtitle = self.content {
                     HStack {
                         Text(subtitle).font(Font.title3)
@@ -58,6 +82,8 @@ public struct ListRowView: View {
                 }
             }.padding(.bottom, .small)
             Spacer()
+            
+            // Add chevron image
             Image(systemName: "chevron.right").padding(.trailing, .standard)
         }
     }
