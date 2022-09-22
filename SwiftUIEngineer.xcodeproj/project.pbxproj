@@ -31,6 +31,7 @@
 		AEF3CA1028DB937200506492 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0F28DB937200506492 /* Padding.swift */; };
 		AEF3CA1328DBA32E00506492 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */; };
 		AEF3CA1628DBC93300506492 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1528DBC93300506492 /* DetailPage.swift */; };
+		AEF3CA1828DCED3600506492 /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1728DCED3600506492 /* StubService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		AEF3CA0F28DB937200506492 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		AEF3CA1528DBC93300506492 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		AEF3CA1728DCED3600506492 /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF3CA0928DB5DBA00506492 /* HomePageService.swift */,
+				AEF3CA1728DCED3600506492 /* StubService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF3CA1828DCED3600506492 /* StubService.swift in Sources */,
 				AE26178328DAF8C2009EDE3F /* HomePageView.swift in Sources */,
 				AEF3CA0E28DB787700506492 /* HomePageData.swift in Sources */,
 				AE26178128DAF8C2009EDE3F /* SwiftUIEngineerApp.swift in Sources */,
