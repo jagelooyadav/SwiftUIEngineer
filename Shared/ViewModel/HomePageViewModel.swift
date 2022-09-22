@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import Combine
 
 class HomePageViewModel: ObservableObject {
     
     @Published var rows: [ListRowViewModel] = []
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
-    static let isStubbed = true
+    static let isStubbed = false
+    private var cancellable: AnyCancellable?
+
     
     private let service: HomePageDataProvider
     
@@ -21,13 +24,21 @@ class HomePageViewModel: ObservableObject {
     }
     
     func fetchData() {
-        self.service.fetchData { [weak self] data in
-            guard let data = data, let self = self else { return }
-            self.rows.removeAll()
-            for (index, row) in data.results.enumerated() {
-                self.rows.append(ListRowViewModel(rowId: index, title: row.name, subtitle: row.dateString, content: "Price: " + row.price, thumbURL: row.image_urls_thumbnails?.first))
-            }
-        }
+        cancellable = service.fetchData()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] data in
+                guard let self = self else { return }
+                self.rows.removeAll()
+                for (index, row) in data.results.enumerated() {
+                    self.rows.append(ListRowViewModel(rowId: index, title: row.name, subtitle: row.dateString, content: "Price: " + row.price, thumbURL: row.image_urls_thumbnails?.first))
+                }
+            })
     }
 }
 

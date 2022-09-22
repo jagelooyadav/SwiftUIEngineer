@@ -9,7 +9,7 @@ import Foundation
 
 class StubService: HomePageDataProvider {
     private let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-    // https://gist.github.com/stinger/7cb1a81facf7f846e3d53f60be34dd1e
+    
     func fetchData(completion: ((HomePageData?) -> Void)?) {
         DispatchQueue.global().async {
             guard let path = Bundle.main.path(forResource: "apistub", ofType: "json") else {
