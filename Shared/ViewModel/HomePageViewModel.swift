@@ -34,9 +34,11 @@ class HomePageViewModel: ObservableObject {
                 }
             }, receiveValue: { [weak self] data in
                 guard let self = self else { return }
-                self.rows.removeAll()
-                for (index, row) in data.results.enumerated() {
-                    self.rows.append(ListRowViewModel(rowId: index, title: row.name, subtitle: row.dateString, content: "Price: " + row.price, thumbURL: row.image_urls_thumbnails?.first))
+                DispatchQueue.main.async {
+                    self.rows.removeAll()
+                    for (index, row) in data.results.enumerated() {
+                        self.rows.append(ListRowViewModel(rowId: index, title: row.name, subtitle: row.dateString, content: "Price: " + row.price, thumbURL: row.image_urls_thumbnails?.first))
+                    }
                 }
             })
     }
