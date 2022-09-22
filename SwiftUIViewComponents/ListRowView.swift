@@ -74,7 +74,7 @@ public struct ListRowView: View {
                 // Add content if needed
                 if let subtitle = self.content {
                     HStack {
-                        Text(subtitle).font(Font.title3)
+                        Text(subtitle).font(Font.headline)
                         Spacer()
                     }.padding(.leading, .standard)
                 }

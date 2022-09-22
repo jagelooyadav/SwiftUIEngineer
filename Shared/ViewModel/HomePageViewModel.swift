@@ -12,10 +12,11 @@ class HomePageViewModel: ObservableObject {
     @Published var rows: [ListRowViewModel] = []
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
+    static let isStubbed = true
     
     private let service: HomePageDataProvider
     
-    init(service: HomePageDataProvider = HomePageService()) {
+    init(service: HomePageDataProvider = HomePageViewModel.isStubbed ? StubService() : HomePageService()) {
         self.service = service
     }
     

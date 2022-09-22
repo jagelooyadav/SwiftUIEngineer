@@ -12,7 +12,14 @@ protocol HomePageDataProvider {
 }
 
 class HomePageService: HomePageDataProvider {
-    
+    func fetchData(completion: ((HomePageData?) -> Void)?) {
+        completion?(nil)
+    }
+}
+
+class StubService: HomePageDataProvider {
+    private let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    // https://gist.github.com/stinger/7cb1a81facf7f846e3d53f60be34dd1e
     func fetchData(completion: ((HomePageData?) -> Void)?) {
         DispatchQueue.global().async {
             guard let path = Bundle.main.path(forResource: "apistub", ofType: "json") else {
@@ -26,7 +33,7 @@ class HomePageService: HomePageDataProvider {
             }
             let decoder = JSONDecoder()
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+            formatter.dateFormat = self.dateFormat
             decoder.dateDecodingStrategy = .formatted(formatter)
             guard let object = try? decoder.decode(HomePageData.self, from: data) else {
                 completion?(nil)
