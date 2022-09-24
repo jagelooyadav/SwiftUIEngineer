@@ -16,5 +16,4 @@ class DetailPageViewModel: ListRowViewModel {
             self.backgroundURL = URL.init(string: urlString)
         }
     }
-    
 }

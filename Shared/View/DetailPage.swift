@@ -20,6 +20,9 @@ struct DetailPage: View {
                 Spacer()
             }
             
+            VStack {
+                Text("Hello How are you")
+            }
         }.backActionView(action: { dismisAction() })
     }
 }

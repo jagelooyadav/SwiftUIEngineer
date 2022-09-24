@@ -8,11 +8,13 @@
 import Foundation
 import Combine
 
+/// View model which is responsible for sending required data for rending Home Page
 class HomePageViewModel: ObservableObject {
     
     @Published var rows: [ListRowViewModel] = []
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
+    
     private var cancellable: AnyCancellable?
 
     private let service: HomePageDataProvider
@@ -26,6 +28,8 @@ class HomePageViewModel: ObservableObject {
         self.service = service
     }
 }
+
+// MARK: HomePageDataProvider
 
 extension HomePageViewModel {
     func fetchData() {
