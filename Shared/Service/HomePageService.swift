@@ -17,7 +17,7 @@ class HomePageService: HomePageDataProvider {
     private let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     private let container: ContainerInterface
     
-    init(container: ContainerInterface = StubServer.shared) {
+    init(container: ContainerInterface = Container.shared) {
         self.container = container
     }
     

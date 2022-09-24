@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SwiftUIViewComponents
 
 struct DetailPage: View {
     
@@ -14,15 +15,41 @@ struct DetailPage: View {
     @Environment(\.dismiss) var dismisAction
     
     var body: some View {
-        ZStack(alignment: .top) {
-            VStack {
-                AsyncImage(url: viewModel.backgroundURL).ignoresSafeArea()
+        GeometryReader { metrics in
+            ZStack(alignment: .top) {
+                // Add Background
+                VStack {
+                    AsyncImage(url: viewModel.backgroundURL)
+                        .frame(width: metrics.size.width, height: metrics.size.height)
+                        .padding(.top, -Padding.extraLarge.rawValue)
+                        .ignoresSafeArea()
+                    Spacer()
+                }
+                // Add content
+                createContentView(contentHeight: metrics.size.height)
+            }.backActionView(action: { dismisAction() })
+        }
+    }
+    
+    func createContentView(contentHeight: CGFloat) -> some View {
+        VStack(spacing: 0) {
+            // Add category capsule
+            HStack {
+                CapsuleButton(text: viewModel.title)
+                    .padding(.leading, .standard)
+                    .padding(.top, contentHeight * 0.30)
                 Spacer()
             }
-            
-            VStack {
-                Text("Hello How are you")
+            // Add title
+            HStack {
+                Text(viewModel.eventName)
+                    .font(.title)
+                    .bold()
+                    .multilineTextAlignment(.leading).foregroundColor(Color.white)
+                    .padding(.top, .medium)
+                    .padding(.leading, .standard)
+                Spacer()
             }
-        }.backActionView(action: { dismisAction() })
+        }
     }
 }

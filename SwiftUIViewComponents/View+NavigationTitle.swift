@@ -1,5 +1,5 @@
 //
-//  CustomNavigationView.swift
+//  View+NavigationTitle.swift
 //  SwiftUIViewComponents
 //
 //  Created by Diamonds on 30/06/1944 Saka.

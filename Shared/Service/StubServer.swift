@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import Container
 
+/// Data server provides data from local bundle file
 class StubServer: ContainerInterface {
     static let shared = StubServer()
     

@@ -17,7 +17,7 @@
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
 		AEF3C9F728DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F828DB23B900506492 /* SwiftUIViewComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AEF3CA0128DB23DC00506492 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0028DB23DC00506492 /* CustomNavigationView.swift */; };
+		AEF3CA0128DB23DC00506492 /* View+NavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0028DB23DC00506492 /* View+NavigationTitle.swift */; };
 		AEF3CA0428DB52AD00506492 /* apistub.json in Resources */ = {isa = PBXBuildFile; fileRef = AEF3CA0228DB529C00506492 /* apistub.json */; };
 		AEF3CA0C28DB651000506492 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0B28DB650F00506492 /* ListRowView.swift */; };
 		AEF3CA0D28DB784F00506492 /* HomePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA0928DB5DBA00506492 /* HomePageService.swift */; };
@@ -36,6 +36,8 @@
 		AEF3CA4228DCFAF800506492 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4128DCFAF800506492 /* Container.swift */; };
 		AEF3CA4428DEB15100506492 /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */; };
 		AEF3CA4728DEBB6800506492 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4628DEBB6800506492 /* DetailPageViewModel.swift */; };
+		AEF3CA4A28DEEE1400506492 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4928DEEE1400506492 /* CapsuleButton.swift */; };
+		AEF3CA4C28DEF33900506492 /* BackgroundModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4B28DEF33900506492 /* BackgroundModifierView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +119,7 @@
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewComponentsTests.swift; sourceTree = "<group>"; };
-		AEF3CA0028DB23DC00506492 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		AEF3CA0028DB23DC00506492 /* View+NavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationTitle.swift"; sourceTree = "<group>"; };
 		AEF3CA0228DB529C00506492 /* apistub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apistub.json; sourceTree = "<group>"; };
 		AEF3CA0628DB5ADF00506492 /* HomePageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageData.swift; sourceTree = "<group>"; };
 		AEF3CA0928DB5DBA00506492 /* HomePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageService.swift; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 		AEF3CA4128DCFAF800506492 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
 		AEF3CA4628DEBB6800506492 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
+		AEF3CA4928DEEE1400506492 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		AEF3CA4B28DEF33900506492 /* BackgroundModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifierView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,10 +243,12 @@
 		AEF3C9E328DB23B900506492 /* SwiftUIViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				AEF3CA0028DB23DC00506492 /* CustomNavigationView.swift */,
+				AEF3CA0028DB23DC00506492 /* View+NavigationTitle.swift */,
 				AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */,
 				AEF3CA0B28DB650F00506492 /* ListRowView.swift */,
 				AEF3CA0F28DB937200506492 /* Padding.swift */,
+				AEF3CA4928DEEE1400506492 /* CapsuleButton.swift */,
+				AEF3CA4B28DEF33900506492 /* BackgroundModifierView.swift */,
 			);
 			path = SwiftUIViewComponents;
 			sourceTree = "<group>";
@@ -576,8 +582,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */,
-				AEF3CA0128DB23DC00506492 /* CustomNavigationView.swift in Sources */,
+				AEF3CA4C28DEF33900506492 /* BackgroundModifierView.swift in Sources */,
+				AEF3CA0128DB23DC00506492 /* View+NavigationTitle.swift in Sources */,
 				AEF3CA0C28DB651000506492 /* ListRowView.swift in Sources */,
+				AEF3CA4A28DEEE1400506492 /* CapsuleButton.swift in Sources */,
 				AEF3CA1028DB937200506492 /* Padding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
