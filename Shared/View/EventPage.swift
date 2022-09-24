@@ -54,7 +54,7 @@ struct EventPage: View {
     private func createLocationView() -> some View {
         HStack {
             VStack(spacing: 0.0) {
-                IconLabelView(iconImage: Image(systemName: "clock"), title: eventPageViewModel.locationHeading, titleProperties: LabelProperties(font: .footnote.bold(), color: .black), isSpacingIgnored: true)
+                IconLabelView(iconImage: Image(systemName: "clock"), title: eventPageViewModel.locationHeading, titleProperties: LabelProperties(font: .footnote.bold(), color: .black), isSpacingIgnored: false)
                     .padding(.bottom, .extraSmall)
                     .padding(.horizontal, .small)
                     .padding(.top, .small)
