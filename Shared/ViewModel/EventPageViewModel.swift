@@ -34,6 +34,14 @@ class EventPageViewModel: ObservableObject {
      "Historical": Color.green,
      "World Cup 2022 Matches": Color(red: 72.0/255.0, green: 168.0/255.0, blue: 226.0/255.0)]
     
+    @Published var eventTimingHeading: String = "Event Timing"
+    @Published var eventTimeString: String = "Each Sun, Mon, Thu 10.00 pm - 2.00 pm"
+    @Published var eventDurationString: String = "22 Nov 2022 - 29 Dec 2022"
+    
+    @Published var locationHeading: String = "Katara Cultural Village Main Art Center"
+    @Published var locationDescriptionString: String = "AI Gassar, Doha"
+    @Published var locationDistanceString: String = "2.9"
+    
     init() {
         initialiseTags()
     }
