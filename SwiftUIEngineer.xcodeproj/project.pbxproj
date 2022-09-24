@@ -40,6 +40,7 @@
 		AEF3CA3F28DCFA3B00506492 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1928DCEE0300506492 /* AppError.swift */; };
 		AEF3CA4028DCFA5D00506492 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA1B28DCF91100506492 /* NetworkConfig.swift */; };
 		AEF3CA4228DCFAF800506492 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4128DCFAF800506492 /* Container.swift */; };
+		AEF3CA4428DEB15100506492 /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		AEF3CA2B28DCFA0600506492 /* ContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3CA3228DCFA0600506492 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
 		AEF3CA4128DCFAF800506492 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */,
+				AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF3CA1828DCED3600506492 /* StubService.swift in Sources */,
+				AEF3CA4428DEB15100506492 /* ListRowViewModel.swift in Sources */,
 				AE26178328DAF8C2009EDE3F /* HomePageView.swift in Sources */,
 				AEF3CA0E28DB787700506492 /* HomePageData.swift in Sources */,
 				AE26178128DAF8C2009EDE3F /* SwiftUIEngineerApp.swift in Sources */,
