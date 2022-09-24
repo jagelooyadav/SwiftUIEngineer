@@ -9,8 +9,8 @@ import SwiftUI
 
 extension View {
     
-    public func padding(_ edges: Edge.Set = .all, _ option: Padding = .standard) -> some View {
-        padding(edges, option.rawValue)
+    public func padding(_ edges: Edge.Set = .all, _ paddingOption: Padding) -> some View {
+        padding(edges, paddingOption.rawValue)
     }
 }
 

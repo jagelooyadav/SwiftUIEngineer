@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIViewComponents
 
-struct HomePageView: View {
+struct HomePage: View {
     @ObservedObject private var viewModel = HomePageViewModel()
     
     init() {
@@ -18,8 +18,8 @@ struct HomePageView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                Color.gray.opacity(0.1).ignoresSafeArea(.all, edges: .bottom)
-               
+                Color.background.ignoresSafeArea(.all, edges: .bottom)
+                
                 NavigationLink(isActive: $viewModel.isNavigationActive, destination: {
                     if let selectedRowData = viewModel.selectRow {
                         DetailPage(viewModel: DetailPageViewModel(rowId: viewModel.selectedRowId, rowData: selectedRowData))
@@ -27,7 +27,7 @@ struct HomePageView: View {
                         EmptyView()
                     }
                 },
-                                                   label: { EmptyView() })
+                               label: { EmptyView() })
                 List {
                     ForEach($viewModel.rows, id:\.rowId) { row in
                         ListRowView(title: row.title.wrappedValue, subtitle: row.subtitle.wrappedValue, content: row.content

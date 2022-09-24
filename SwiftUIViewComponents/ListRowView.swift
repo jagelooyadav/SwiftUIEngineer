@@ -29,7 +29,7 @@ public struct ListRowView: View {
     
     public var body: some View {
         ZStack {
-            Color.gray.opacity(0.1)
+            Color.background
             VStack {
                 ZStack {
                     Color.white.cornerRadius(Padding.small.rawValue)
@@ -46,12 +46,11 @@ public struct ListRowView: View {
                 AsyncImage(url: URL(string: thumbURL ?? "")) { image in
                     image.resizable(resizingMode: .tile).frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
                 } placeholder: {
-                    Color.gray.opacity(0.1).frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
+                    Color.background.frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
                 }
                 Spacer()
             }
-            
-            // Add titles content
+
             VStack(alignment: .leading, spacing: Padding.small.rawValue) {
                 // Add title
                 HStack {
@@ -73,7 +72,7 @@ public struct ListRowView: View {
                 // Add content if needed
                 if let subtitle = self.content {
                     HStack {
-                        Text(subtitle).font(Font.headline)
+                        Text(subtitle).font(Font.title3)
                         Spacer()
                     }.padding(.leading, .standard)
                 }
