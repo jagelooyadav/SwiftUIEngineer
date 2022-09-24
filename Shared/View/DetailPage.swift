@@ -13,6 +13,7 @@ struct DetailPage: View {
     
     @ObservedObject var viewModel: DetailPageViewModel
     @Environment(\.dismiss) var dismisAction
+    @State var isPresenented = false
     
     var body: some View {
         GeometryReader { metrics in
@@ -20,6 +21,7 @@ struct DetailPage: View {
                 // Add Background
                 VStack {
                     AsyncImage(url: viewModel.backgroundURL)
+                        .scaledToFill()
                         .frame(width: metrics.size.width, height: metrics.size.height)
                         .padding(.top, -Padding.extraLarge.rawValue)
                         .ignoresSafeArea()
@@ -35,7 +37,9 @@ struct DetailPage: View {
         VStack(spacing: 0) {
             // Add category capsule
             HStack {
-                CapsuleButton(text: viewModel.title)
+                CapsuleButton(text: viewModel.title, action: {
+                    self.isPresenented = true
+                })
                     .padding(.leading, .standard)
                     .padding(.top, contentHeight * 0.30)
                 Spacer()
@@ -51,5 +55,27 @@ struct DetailPage: View {
                 Spacer()
             }
         }
+        .interactiveDismissDisabled(true)
+        .sheet(isPresented: $isPresenented) {
+            BasicBottomSheet()
+        }
+    }
+}
+
+struct BasicBottomSheet: View {
+    @State private var showSheet = false
+ 
+    var body: some View {
+        VStack {
+            Button("Show Bottom Sheet") {
+                showSheet.toggle()
+            }
+            .buttonStyle(.borderedProminent)
+            .sheet(isPresented: $showSheet) {
+                Text("This is the expandable bottom sheet.")
+            }
+ 
+            Spacer()
+        }.frame(height: 200.0)
     }
 }
