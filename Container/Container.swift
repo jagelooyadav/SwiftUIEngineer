@@ -9,14 +9,14 @@ import Foundation
 import Combine
 
 public protocol ContainerInterface {
-    func fetch(opcode: Opcode) -> AnyPublisher<Data, ContainerError>
+    func fetch(opcode: Opcode) -> AnyPublisher<Data, Error>
 }
 
 public class Container: ContainerInterface {
     
     public static let shared = Container()
     
-    public func fetch(opcode: Opcode) -> AnyPublisher<Data, ContainerError> {
+    public func fetch(opcode: Opcode) -> AnyPublisher<Data, Error> {
         guard let url = URL(string: opcode.uri) else {
             return Fail(error: ContainerError.invalidURI)
                 .eraseToAnyPublisher()

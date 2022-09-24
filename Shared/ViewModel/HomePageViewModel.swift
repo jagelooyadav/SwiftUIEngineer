@@ -15,7 +15,7 @@ class HomePageViewModel: ObservableObject {
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
     
-    private var cancellable: AnyCancellable?
+    private var cancellable = Set<AnyCancellable>()
 
     private let service: HomePageDataProvider
     
@@ -43,16 +43,17 @@ extension HomePageViewModel {
             }
         }
         
-        cancellable = service.fetchData()
+        service.fetchData()
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
+                    
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             }, receiveValue: { data in
                 parse(data: data)
-            })
+            }).store(in: &cancellable)
     }
 }

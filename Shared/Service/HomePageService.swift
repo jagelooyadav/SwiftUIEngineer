@@ -10,26 +10,14 @@ import Combine
 import Container
 
 protocol HomePageDataProvider {
-    func fetchData(completion: ((HomePageData?) -> Void)?)
     func fetchData() -> AnyPublisher<HomePageData, Error>
-}
-
-extension HomePageDataProvider {
-    func fetchData() -> AnyPublisher<HomePageData, Error> {
-        return Fail(error: ContainerError.invalidURI)
-                .eraseToAnyPublisher()
-    }
-    
-    func fetchData(completion: ((HomePageData?) -> Void)?) {
-        completion?(nil)
-    }
 }
 
 class HomePageService: HomePageDataProvider {
     private let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     private let container: ContainerInterface
     
-    init(container: ContainerInterface = Container.shared) {
+    init(container: ContainerInterface = StubServer.shared) {
         self.container = container
     }
     
