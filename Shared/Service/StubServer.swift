@@ -11,8 +11,6 @@ import Container
 
 /// Data server provides data from local bundle file
 class StubServer: ContainerInterface {
-    static let shared = StubServer()
-    
     func fetch(opcode: Opcode) -> AnyPublisher<Data, Error> {
         let subject = PassthroughSubject<Data, Error>()
         DispatchQueue.global().async {
@@ -29,12 +27,6 @@ class StubServer: ContainerInterface {
     }
     
     private let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-    
-    func fetchData(completion: ((HomePageData?) -> Void)?) {
-        DispatchQueue.global().async {
-            
-        }
-    }
 }
 
 enum StubError: Error, LocalizedError {

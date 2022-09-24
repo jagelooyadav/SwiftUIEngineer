@@ -16,6 +16,8 @@
 		AE3E47D728DF89D0005C355C /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */; };
 		AE3E47DB28DF9668005C355C /* IconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47DA28DF9668005C355C /* IconLabelView.swift */; };
 		AE3E47DD28DF9765005C355C /* LabelProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47DC28DF9765005C355C /* LabelProperties.swift */; };
+		AE3E47E128DFA83E005C355C /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47E028DFA83E005C355C /* HomePageViewModelTests.swift */; };
+		AE3E47E328DFAB31005C355C /* Container.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3CA2228DCFA0500506492 /* Container.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */; };
 		AEF3C9EC28DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
@@ -126,6 +128,7 @@
 		AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
 		AE3E47DA28DF9668005C355C /* IconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelView.swift; sourceTree = "<group>"; };
 		AE3E47DC28DF9765005C355C /* LabelProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelProperties.swift; sourceTree = "<group>"; };
+		AE3E47E028DFA83E005C355C /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
 		AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIViewComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3E47E328DFAB31005C355C /* Container.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +219,7 @@
 				AEF3CA2328DCFA0500506492 /* Container */,
 				AEF3CA3128DCFA0600506492 /* ContainerTests */,
 				AE26176128DAF8C2009EDE3F /* Products */,
+				AE3E47E228DFAB31005C355C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,8 +255,16 @@
 			children = (
 				AE26177128DAF8C2009EDE3F /* Tests_iOS.swift */,
 				AE26177328DAF8C2009EDE3F /* Tests_iOSLaunchTests.swift */,
+				AE3E47E028DFA83E005C355C /* HomePageViewModelTests.swift */,
 			);
 			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		AE3E47E228DFAB31005C355C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AEF3C9E328DB23B900506492 /* SwiftUIViewComponents */ = {
@@ -595,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3E47E128DFA83E005C355C /* HomePageViewModelTests.swift in Sources */,
 				AE26177428DAF8C2009EDE3F /* Tests_iOSLaunchTests.swift in Sources */,
 				AE26177228DAF8C2009EDE3F /* Tests_iOS.swift in Sources */,
 			);
