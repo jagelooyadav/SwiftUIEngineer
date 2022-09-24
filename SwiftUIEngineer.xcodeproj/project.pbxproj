@@ -12,6 +12,8 @@
 		AE26178128DAF8C2009EDE3F /* SwiftUIEngineerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26175928DAF8C0009EDE3F /* SwiftUIEngineerApp.swift */; };
 		AE26178328DAF8C2009EDE3F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE26175A28DAF8C0009EDE3F /* HomePage.swift */; };
 		AE26178528DAF8C2009EDE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE26175B28DAF8C2009EDE3F /* Assets.xcassets */; };
+		AE3E47D528DF45FD005C355C /* EventPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47D428DF45FD005C355C /* EventPageViewModel.swift */; };
+		AE3E47D728DF89D0005C355C /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */; };
 		AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */; };
 		AEF3C9EC28DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
@@ -118,6 +120,8 @@
 		AE26176D28DAF8C2009EDE3F /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE26177128DAF8C2009EDE3F /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		AE26177328DAF8C2009EDE3F /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		AE3E47D428DF45FD005C355C /* EventPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewModel.swift; sourceTree = "<group>"; };
+		AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
 		AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIViewComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +261,7 @@
 				AEF3CA4B28DEF33900506492 /* BackgroundModifierView.swift */,
 				AEF3CAA628DF25FB00506492 /* Color+App.swift */,
 				AEF3CAA828DF27DE00506492 /* TagsView.swift */,
+				AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */,
 			);
 			path = SwiftUIViewComponents;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				AEF3CA1228DBA32E00506492 /* HomePageViewModel.swift */,
 				AEF3CA4328DEB15100506492 /* ListRowViewModel.swift */,
 				AEF3CA4628DEBB6800506492 /* DetailPageViewModel.swift */,
+				AE3E47D428DF45FD005C355C /* EventPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				AEF3CA1628DBC93300506492 /* DetailPage.swift in Sources */,
 				AEF3CA0D28DB784F00506492 /* HomePageService.swift in Sources */,
 				AEF3CA1328DBA32E00506492 /* HomePageViewModel.swift in Sources */,
+				AE3E47D528DF45FD005C355C /* EventPageViewModel.swift in Sources */,
 				AEF3CAA528DF254D00506492 /* EventPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +600,7 @@
 			files = (
 				AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */,
 				AEF3CAA728DF25FB00506492 /* Color+App.swift in Sources */,
+				AE3E47D728DF89D0005C355C /* TitleDescriptionView.swift in Sources */,
 				AEF3CA4C28DEF33900506492 /* BackgroundModifierView.swift in Sources */,
 				AEF3CAA928DF27DE00506492 /* TagsView.swift in Sources */,
 				AEF3CA0128DB23DC00506492 /* View+NavigationTitle.swift in Sources */,

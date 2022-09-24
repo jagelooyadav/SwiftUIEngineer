@@ -20,37 +20,52 @@ public struct TagsView: View {
     
     public var tags: [TagItem]
     
+    @ObservedObject private var sizeMapping = SizeMapping.shared
+    
+    @State var componentheight: CGFloat = 40.0
+    
     public init(title: String? = nil, tags: [TagItem], onTagSelect: ((TagItem) -> Void)? = nil) {
         self.tags = tags
         self.title = title
+        SizeMapping.shared.reset()
+    }
+    
+    public func sizeToFit() -> some View {
+        // To -Do: Needs to fix it
+        return frame(height: 120.0)
     }
     
     public var body: some View {
         GeometryReader { metrics in
-            
-            VStack(alignment: .leading) {
-                if let title = title {
-                    Text(title)
-                        .font(.subheadline)
-                        .bold()
-                        .padding([.leading, .trailing], .standard)
-                        .padding(.bottom, .extraSmall)
-                }
-                CollectionTextItemsView(
-                    availableWidth: metrics.size.width, data: tags,
-                    spacing: 15,
-                    alignment: .leading
-                ) { item in
-                    
-                    Text(verbatim: item.tagText)
-                        .font(.footnote)
-                        .padding(.all, Padding.extraSmall)
-                        .modifier(BackgroundModifierView(shape: Capsule(), color: Color.red))
-                        .onTapGesture {
-                            print("tapp === \(item.tagText)")
+            ZStack {
+                Color.white
+                VStack(alignment: .leading) {
+                    if let title = title {
+                        Text(title)
+                            .font(.subheadline)
+                            .bold()
+                            .padding(.bottom, .extraSmall)
+
+                    }
+                    HStack {
+                        CollectionTextItemsView(
+                            availableWidth: metrics.size.width, data: tags,
+                            spacing: 15,
+                            alignment: .leading,
+                            componentHeight: $componentheight
+                        ) { item in
+                            
+                            Text(verbatim: item.tagText)
+                                .font(.footnote)
+                                .padding(.all, Padding.extraSmall)
+                                .modifier(BackgroundModifierView(shape: Capsule(), color: item.color))
+                                .onTapGesture {
+                                    print("tapp === \(item.tagText)")
+                                }
                         }
+                        Spacer()
+                    }
                 }
-                .padding(.horizontal, .standard)
             }
         }
     }
@@ -73,11 +88,12 @@ private struct CollectionTextItemsView<Data: Collection, Content: View>: View wh
     let data: Data
     let spacing: CGFloat
     let alignment: HorizontalAlignment
+    @Binding var componentHeight: CGFloat
     let content: (Data.Element) -> Content
     @State var elementsSize: [Data.Element: CGSize] = [:]
     
     var body : some View {
-        VStack(alignment: alignment, spacing: spacing) {
+        VStack(alignment: .leading, spacing: spacing) {
             ForEach(computeRows(), id: \.self) { rowElements in
                 HStack(spacing: spacing) {
                     ForEach(rowElements, id: \.self) { element in
@@ -105,6 +121,8 @@ private struct CollectionTextItemsView<Data: Collection, Content: View>: View wh
             } else {
                 currentRow = currentRow + 1
                 rows.append([element])
+                SizeMapping.shared.tagsHeight = SizeMapping.tagHeight * CGFloat(rows.count)
+                print("Fit == \(rows.count)")
                 remainingWidth = availableWidth
             }
             
@@ -137,5 +155,14 @@ struct Previews_TagsView_Previews: PreviewProvider {
         let data = ["Shopping", "Food", "Sports", "Fan Zones", "Movies", "Historical", "World Cup 2022 Matches"]
         
         TagsView(title: "Tags", tags: data.map { TagItem(tagText: $0)})
+    }
+}
+
+private class SizeMapping: ObservableObject {
+    static let shared = SizeMapping()
+    @Published var tagsHeight: CGFloat = 40.0
+    static let tagHeight: CGFloat = 40.0
+    func reset() {
+        tagsHeight = 40.0
     }
 }

@@ -19,6 +19,7 @@ struct DetailPage: View {
         GeometryReader { metrics in
             ZStack(alignment: .top) {
                 // Add Background
+                Color.background.ignoresSafeArea()
                 VStack {
                     AsyncImage(url: viewModel.backgroundURL)
                         .scaledToFill()
