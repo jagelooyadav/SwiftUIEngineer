@@ -22,9 +22,7 @@ struct EventPage: View {
                 HStack {
                     TagsView(title: "Tags", tags: eventPageViewModel.tagItems)
                         .sizeToFit()
-                        .padding(.horizontal, .standard)
-                        
-                    Spacer()
+                        .modifier(BackgroundModifierView.init(shape: Rectangle(), color: .white))
                 }
                 
                 TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)

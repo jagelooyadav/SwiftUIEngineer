@@ -38,14 +38,14 @@ public struct TagsView: View {
     public var body: some View {
         GeometryReader { metrics in
             ZStack {
-                Color.white
                 VStack(alignment: .leading) {
                     if let title = title {
                         Text(title)
                             .font(.subheadline)
                             .bold()
                             .padding(.bottom, .extraSmall)
-
+                            .padding(.top, .small)
+                        
                     }
                     HStack {
                         CollectionTextItemsView(
@@ -65,7 +65,8 @@ public struct TagsView: View {
                         }
                         Spacer()
                     }
-                }
+                }.frame(maxWidth: .infinity)
+                    .padding(.horizontal, .small)
             }
         }
     }
