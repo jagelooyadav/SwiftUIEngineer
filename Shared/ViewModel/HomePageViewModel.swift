@@ -17,6 +17,11 @@ class HomePageViewModel: ObservableObject {
 
     private let service: HomePageDataProvider
     
+    var selectRow: ListRow? {
+        guard selectedRowId >= 0 && rows.count > selectedRowId else { return nil }
+        return rows[selectedRowId].rowData
+    }
+    
     init(service: HomePageDataProvider = HomePageService()) {
         self.service = service
     }

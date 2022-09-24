@@ -8,17 +8,30 @@
 import SwiftUI
 
 extension View {
-    public func navigationCustomTitle(_ title: String?, mode: NavigationBarItem.TitleDisplayMode = .inline, backAction: (() -> Void)? = nil) -> some View {
+    
+    /// Builder function to customise navigation title at app level
+    public func navigationCustomTitle(_ title: String?) -> some View {
         toolbar {
             ToolbarItem(placement: .principal) {
                 if let title = title {
-                    Text(title).foregroundColor(.black).font(Font.system(size: 18.0, weight: .bold, design: .rounded)).padding(.top, mode == .inline ? 0.0 : 20.0)
+                    Text(title).foregroundColor(.black).font(Font.system(size: 18.0, weight: .bold, design: .rounded))
                 } else {
                     EmptyView()
                 }
             }
-        }.navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.inline)
-        
+        }.navigationBarTitleDisplayMode(.inline)
+    }
+    
+    /// Custom back button builder function can be used to add custom back action button
+    public func backActionView(action: (() -> Void)?) -> some View {
+        func backButtonView() -> some View {
+            Button(action: {
+                action?()
+            }) {
+                Image(systemName: "chevron.left").padding(EdgeInsets.init(top: 10.0, leading: 0, bottom: 10.0, trailing: 20.0))
+            }
+        }
+        return navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButtonView())
     }
 }

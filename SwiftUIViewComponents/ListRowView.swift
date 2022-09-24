@@ -42,9 +42,7 @@ public struct ListRowView: View {
     private func createView() -> some View {
         HStack {
             // Add thumb
-            
             VStack {
-                //https://sample-videos.com/img/Sample-png-image-100kb.png
                 AsyncImage(url: URL(string: thumbURL ?? "")) { image in
                     image.resizable(resizingMode: .tile).frame(width: ThumSize.width, height: ThumSize.height).padding([.leading, .bottom], .small).padding(.top, .standard).cornerRadius(Padding.small.rawValue)
                 } placeholder: {
@@ -52,7 +50,8 @@ public struct ListRowView: View {
                 }
                 Spacer()
             }
-
+            
+            // Add titles content
             VStack(alignment: .leading, spacing: Padding.small.rawValue) {
                 // Add title
                 HStack {

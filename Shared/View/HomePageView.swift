@@ -21,7 +21,11 @@ struct HomePageView: View {
                 Color.gray.opacity(0.1).ignoresSafeArea(.all, edges: .bottom)
                
                 NavigationLink(isActive: $viewModel.isNavigationActive, destination: {
-                    Text("Open bneww page ")
+                    if let selectedRowData = viewModel.selectRow {
+                        DetailPage(viewModel: DetailPageViewModel(rowId: viewModel.selectedRowId, rowData: selectedRowData))
+                    } else {
+                        EmptyView()
+                    }
                 },
                                                    label: { EmptyView() })
                 List {
