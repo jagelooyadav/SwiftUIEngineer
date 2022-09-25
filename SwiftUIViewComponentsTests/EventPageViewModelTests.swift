@@ -7,29 +7,30 @@
 
 import XCTest
 
+@testable import SwiftUIEngineer
+import Combine
+import SwiftUI
+
+/// Not much logic to test as all of data are hard coded. Needs to revist once logic and date would be decided
 class EventPageViewModelTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var subject: EventPageViewModel!
+    
+    override func setUp() {
+        super.setUp()
+        subject = EventPageViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_colorMappings() {
+        XCTAssertEqual(subject.tagItems.first?.color, Color(red: 72.0/255.0, green: 168.0/255.0, blue: 226.0/255.0))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_title() {
+        XCTAssertEqual(subject.title, "World cup")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    override func tearDown() {
+        subject = nil
+        super.tearDown()
     }
 
 }
