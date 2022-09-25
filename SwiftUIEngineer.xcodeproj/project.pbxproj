@@ -18,6 +18,8 @@
 		AE3E47F628E0411C005C355C /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */; };
 		AE3E47F728E04188005C355C /* HomePageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */; };
 		AE3E47F828E04188005C355C /* ListRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F328E0411C005C355C /* ListRowViewModelTests.swift */; };
+		AE3E47FA28E05077005C355C /* DetailPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F928E05077005C355C /* DetailPageViewModelTests.swift */; };
+		AE3E47FC28E05307005C355C /* EventPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47FB28E05307005C355C /* EventPageViewModelTests.swift */; };
 		AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */; };
 		AEF3C9EC28DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
@@ -129,6 +131,8 @@
 		AE3E47EC28E040F5005C355C /* SwiftUIEngineerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEngineerTests.swift; sourceTree = "<group>"; };
 		AE3E47F328E0411C005C355C /* ListRowViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowViewModelTests.swift; sourceTree = "<group>"; };
 		AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
+		AE3E47F928E05077005C355C /* DetailPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPageViewModelTests.swift; path = SwiftUIEngineerTests/DetailPageViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		AE3E47FB28E05307005C355C /* EventPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewModelTests.swift; sourceTree = "<group>"; };
 		AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIViewComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +292,8 @@
 				AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */,
 				AE3E47F328E0411C005C355C /* ListRowViewModelTests.swift */,
 				AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */,
+				AE3E47F928E05077005C355C /* DetailPageViewModelTests.swift */,
+				AE3E47FB28E05307005C355C /* EventPageViewModelTests.swift */,
 			);
 			path = SwiftUIViewComponentsTests;
 			sourceTree = "<group>";
@@ -607,6 +613,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3E47FC28E05307005C355C /* EventPageViewModelTests.swift in Sources */,
+				AE3E47FA28E05077005C355C /* DetailPageViewModelTests.swift in Sources */,
 				AE3E47F728E04188005C355C /* HomePageViewModelTests.swift in Sources */,
 				AE3E47F828E04188005C355C /* ListRowViewModelTests.swift in Sources */,
 				AE3E47ED28E040F5005C355C /* SwiftUIEngineerTests.swift in Sources */,

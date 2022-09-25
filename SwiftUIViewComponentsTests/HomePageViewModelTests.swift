@@ -38,8 +38,9 @@ class HomePageViewModelTests: XCTestCase {
         subject1.selectedRowId = 0
         subject1.$isDataLoaded
             .dropFirst()
-            .sink { _ in
-                XCTAssertEqual(self.subject1?.selectRow?.name, "Notebook")
+            .dropFirst()
+            .sink { [weak self] _ in
+                XCTAssertEqual(self?.subject1?.selectRow?.name, "Notebook")
             }.store(in: &cancelables)
     }
     
@@ -47,8 +48,8 @@ class HomePageViewModelTests: XCTestCase {
         subject2.fetchData()
         subject2.$isDataLoaded
             .dropFirst()
-            .sink { _ in
-                XCTAssertNil(self.subject2.selectRow)
+            .sink { [weak self] _ in
+                XCTAssertNil(self?.subject2.selectRow)
             }.store(in: &cancelables)
     }
 

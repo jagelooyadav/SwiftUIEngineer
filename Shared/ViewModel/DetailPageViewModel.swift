@@ -17,7 +17,7 @@ class DetailPageViewModel: ListRowViewModel {
     override init(rowId: Int, rowData: ListRow) {
         super.init(rowId: rowId, rowData: rowData)
         if let urlString = rowData.image_urls?.first {
-            self.backgroundURL = URL.init(string: urlString)
+            self.backgroundURL = URL(string: urlString)
         }
     }
 }
