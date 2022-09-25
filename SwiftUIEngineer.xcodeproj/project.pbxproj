@@ -29,6 +29,7 @@
 		AEDFC1C328E078F2008EA5E8 /* HomePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1B628E078F2008EA5E8 /* HomePageService.swift */; };
 		AEDFC1C428E078F2008EA5E8 /* StubServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1B728E078F2008EA5E8 /* StubServer.swift */; };
 		AEDFC1C628E07FDC008EA5E8 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */; };
+		AEDFC1C828E098EC008EA5E8 /* HomePageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1C728E098EC008EA5E8 /* HomePageServiceTests.swift */; };
 		AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */; };
 		AEF3C9EC28DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
@@ -143,6 +144,7 @@
 		AEDFC1B628E078F2008EA5E8 /* HomePageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageService.swift; sourceTree = "<group>"; };
 		AEDFC1B728E078F2008EA5E8 /* StubServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubServer.swift; sourceTree = "<group>"; };
 		AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		AEDFC1C728E098EC008EA5E8 /* HomePageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageServiceTests.swift; sourceTree = "<group>"; };
 		AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIViewComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 				AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */,
 				AE3E47F328E0411C005C355C /* ListRowViewModelTests.swift */,
 				AE3E47EC28E040F5005C355C /* SwiftUIEngineerTests.swift */,
+				AEDFC1C728E098EC008EA5E8 /* HomePageServiceTests.swift */,
 			);
 			path = SwiftUIEngineerTests;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				AE3E47FC28E05307005C355C /* EventPageViewModelTests.swift in Sources */,
 				AE3E47FA28E05077005C355C /* DetailPageViewModelTests.swift in Sources */,
 				AE3E47F728E04188005C355C /* HomePageViewModelTests.swift in Sources */,
+				AEDFC1C828E098EC008EA5E8 /* HomePageServiceTests.swift in Sources */,
 				AE3E47F828E04188005C355C /* ListRowViewModelTests.swift in Sources */,
 				AE3E47ED28E040F5005C355C /* SwiftUIEngineerTests.swift in Sources */,
 			);

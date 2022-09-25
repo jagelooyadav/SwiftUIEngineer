@@ -13,11 +13,16 @@ class DetailPageViewModel: ListRowViewModel {
     @Published var backgroundURL: URL?
     @Published var textChipTopPadding: Float = 20.0
     @Published var eventName = "Katara Summer Shopping Festival 2022" // This data is supposed to come in domain model from back end. Just jard code in UI model as it is not coming.
+    @Published var isPresenented = false
     
     override init(rowId: Int, rowData: ListRow) {
         super.init(rowId: rowId, rowData: rowData)
         if let urlString = rowData.image_urls?.first {
             self.backgroundURL = URL(string: urlString)
+        }
+        self.isPresenented = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+            
         }
     }
 }

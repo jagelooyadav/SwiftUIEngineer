@@ -13,8 +13,7 @@ struct DetailPage: View {
     
     @ObservedObject var viewModel: DetailPageViewModel
     @Environment(\.dismiss) var dismisAction
-    @State var isPresenented = false
-    
+        
     var body: some View {
         GeometryReader { metrics in
             ZStack(alignment: .top) {
@@ -39,7 +38,6 @@ struct DetailPage: View {
             // Add category capsule
             HStack {
                 CapsuleButton(text: viewModel.title, action: {
-                    self.isPresenented = true
                 })
                 .padding(.leading, .standard)
                     .padding(.top, contentHeight * 0.30)
@@ -57,8 +55,22 @@ struct DetailPage: View {
             }
         }
         .interactiveDismissDisabled(true)
-        .sheet(isPresented: $isPresenented) {
-            EventPage()
+        .openSheet(isPresented: $viewModel.isPresenented, height: contentHeight) {
+            EventPage() {
+                dismisAction()
+            }
+        }
+    }
+}
+
+extension View {
+    func openSheet(isPresented: Binding<Bool>, height: CGFloat, content: @escaping () -> some View) -> some View {
+        if #available(iOS 16.0, *) {
+            return sheet(isPresented: isPresented) {
+                content().presentationDetents([.large, .height(height * 0.50)])
+            }
+        } else {
+            return sheet(isPresented: isPresented, content: content)
         }
     }
 }

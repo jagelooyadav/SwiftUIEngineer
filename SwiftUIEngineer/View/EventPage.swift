@@ -11,27 +11,39 @@ import SwiftUIViewComponents
 
 struct EventPage: View {
     @ObservedObject var eventPageViewModel = EventPageViewModel()
+    @Environment(\.dismiss) var dismissAction
+    private var cancel: (() -> Void)
+    
+    init(cancel: @escaping (() -> Void)) {
+        self.cancel = cancel
+    }
 
     var body: some View {
-        ZStack {
-            Color.background.ignoresSafeArea()
-            ScrollView {
-                VStack {
-                    createLocationView().padding(.top, .small)
-                    createEventView()
-                    TitleDiscriptionView(title: eventPageViewModel.eventDetailsHeading, content: eventPageViewModel.eventDetailsDescription, badgeLabel: eventPageViewModel.eventTypeString)
-                    
-                    HStack {
-                        TagsView(title: eventPageViewModel.tagsHeading, tags: eventPageViewModel.tagItems)
-                            .sizeToFit()
-                            .modifier(BackgroundModifierView.init(shape: Rectangle(), color: .white))
+        NavigationView {
+            ZStack {
+                Color.background.ignoresSafeArea()
+                ScrollView {
+                    VStack {
+                        createLocationView().padding(.top, .small)
+                        createEventView()
+                        TitleDiscriptionView(title: eventPageViewModel.eventDetailsHeading, content: eventPageViewModel.eventDetailsDescription, badgeLabel: eventPageViewModel.eventTypeString)
+                        
+                        HStack {
+                            TagsView(title: eventPageViewModel.tagsHeading, tags: eventPageViewModel.tagItems)
+                                .sizeToFit()
+                                .modifier(BackgroundModifierView.init(shape: Rectangle(), color: .white))
+                        }
+                        
+                        TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)
+                        Spacer()
                     }
-                    
-                    TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)
-                    Spacer()
                 }
-            }
-        }.navigationCustomTitle(eventPageViewModel.title)
+            }.navigationCustomTitle(eventPageViewModel.title)
+                .backActionView {
+                    cancel()
+                    dismissAction()
+                }
+        }
     }
     
     private func createEventView() -> some View {
@@ -82,6 +94,6 @@ struct EventPage: View {
 
 struct Previews_EventPage_Previews: PreviewProvider {
     static var previews: some View {
-        EventPage()
+        EventPage() {}
     }
 }
