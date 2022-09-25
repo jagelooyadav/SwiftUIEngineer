@@ -39,7 +39,7 @@ struct HomePage: View {
                             }
                     }
                 }.listStyle(.plain)
-            }.navigationCustomTitle("Home Page")
+            }.navigationCustomTitle(viewModel.title)
         }
     }
 }

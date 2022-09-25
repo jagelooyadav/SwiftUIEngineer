@@ -28,6 +28,7 @@
 		AEDFC1C228E078F2008EA5E8 /* apistub.json in Resources */ = {isa = PBXBuildFile; fileRef = AEDFC1B428E078F2008EA5E8 /* apistub.json */; };
 		AEDFC1C328E078F2008EA5E8 /* HomePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1B628E078F2008EA5E8 /* HomePageService.swift */; };
 		AEDFC1C428E078F2008EA5E8 /* StubServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1B728E078F2008EA5E8 /* StubServer.swift */; };
+		AEDFC1C628E07FDC008EA5E8 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */; };
 		AEF3C9E628DB23B900506492 /* SwiftUIViewComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */; };
 		AEF3C9EC28DB23B900506492 /* SwiftUIViewComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */; };
 		AEF3C9F328DB23B900506492 /* SwiftUIViewComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF3C9F228DB23B900506492 /* SwiftUIViewComponentsTests.swift */; };
@@ -141,6 +142,7 @@
 		AEDFC1B428E078F2008EA5E8 /* apistub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apistub.json; sourceTree = "<group>"; };
 		AEDFC1B628E078F2008EA5E8 /* HomePageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageService.swift; sourceTree = "<group>"; };
 		AEDFC1B728E078F2008EA5E8 /* StubServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubServer.swift; sourceTree = "<group>"; };
+		AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		AEF3C9E228DB23B900506492 /* SwiftUIViewComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIViewComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF3C9E528DB23B900506492 /* SwiftUIViewComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftUIViewComponents.docc; sourceTree = "<group>"; };
 		AEF3C9EB28DB23B900506492 /* SwiftUIViewComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIViewComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +325,7 @@
 				AE3E47D628DF89D0005C355C /* TitleDescriptionView.swift */,
 				AE3E47DA28DF9668005C355C /* IconLabelView.swift */,
 				AE3E47DC28DF9765005C355C /* LabelProperties.swift */,
+				AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */,
 			);
 			path = SwiftUIViewComponents;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				AEF3CA4C28DEF33900506492 /* BackgroundModifierView.swift in Sources */,
 				AEF3CAA928DF27DE00506492 /* TagsView.swift in Sources */,
 				AEF3CA0128DB23DC00506492 /* View+NavigationTitle.swift in Sources */,
+				AEDFC1C628E07FDC008EA5E8 /* SFSymbols.swift in Sources */,
 				AEF3CA0C28DB651000506492 /* ListRowView.swift in Sources */,
 				AEF3CA4A28DEEE1400506492 /* CapsuleButton.swift in Sources */,
 				AEF3CA1028DB937200506492 /* Padding.swift in Sources */,

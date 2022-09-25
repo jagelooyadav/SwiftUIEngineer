@@ -28,7 +28,7 @@ extension View {
             Button(action: {
                 action?()
             }) {
-                Image(systemName: "chevron.left").padding(EdgeInsets.init(top: 10.0, leading: 0, bottom: 10.0, trailing: 20.0))
+                Image(systemName: .chevronLeft).padding(EdgeInsets.init(top: 10.0, leading: 0, bottom: 10.0, trailing: 20.0))
             }
         }
         return navigationBarBackButtonHidden(true)

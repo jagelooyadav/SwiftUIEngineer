@@ -22,7 +22,7 @@ struct EventPage: View {
                     TitleDiscriptionView(title: eventPageViewModel.eventDetailsHeading, content: eventPageViewModel.eventDetailsDescription, badgeLabel: eventPageViewModel.eventTypeString)
                     
                     HStack {
-                        TagsView(title: "Tags", tags: eventPageViewModel.tagItems)
+                        TagsView(title: eventPageViewModel.tagsHeading, tags: eventPageViewModel.tagItems)
                             .sizeToFit()
                             .modifier(BackgroundModifierView.init(shape: Rectangle(), color: .white))
                     }
@@ -31,7 +31,7 @@ struct EventPage: View {
                     Spacer()
                 }
             }
-        }.navigationCustomTitle("World Cup")
+        }.navigationCustomTitle(eventPageViewModel.title)
     }
     
     private func createEventView() -> some View {
@@ -42,10 +42,10 @@ struct EventPage: View {
             }.padding(.top, .standard)
                 .padding(.horizontal, .small)
                 .padding(.bottom, .small)
-            IconLabelView(iconImage: Image(systemName: "clock"), title: eventPageViewModel.eventTimeString, titleProperties: LabelProperties(font: .footnote, color: .gray.opacity(0.8)))
+            IconLabelView(iconImage: Image(systemName: .clock), title: eventPageViewModel.eventTimeString, titleProperties: LabelProperties(font: .footnote, color: .gray.opacity(0.8)))
                 .padding(.bottom, .extraSmall)
                 .padding(.horizontal, .small)
-            IconLabelView(iconImage: Image(systemName: "folder"), title: eventPageViewModel.eventDurationString, titleProperties: LabelProperties(font: .footnote, color: .gray.opacity(0.8)))
+            IconLabelView(iconImage: Image(systemName: .folder), title: eventPageViewModel.eventDurationString, titleProperties: LabelProperties(font: .footnote, color: .gray.opacity(0.8)))
                 .padding(.bottom, .standard)
                 .padding(.horizontal, .small)
         }.modifier(BackgroundModifierView(shape: Rectangle(), color: .white))
@@ -54,7 +54,7 @@ struct EventPage: View {
     private func createLocationView() -> some View {
         HStack {
             VStack(spacing: 0.0) {
-                IconLabelView(iconImage: Image(systemName: "clock"), title: eventPageViewModel.locationHeading, titleProperties: LabelProperties(font: .footnote.bold(), color: .black), isSpacingIgnored: false)
+                IconLabelView(iconImage: Image(systemName: .clock), title: eventPageViewModel.locationHeading, titleProperties: LabelProperties(font: .footnote.bold(), color: .black), isSpacingIgnored: false)
                     .padding(.bottom, .extraSmall)
                     .padding(.horizontal, .small)
                     .padding(.top, .small)
@@ -69,8 +69,8 @@ struct EventPage: View {
                 .background(Color.gray.opacity(0.5))
             
             VStack(alignment: .center) {
-                Text("2.9").font(.headline)
-                Text("Km Away")
+                Text(eventPageViewModel.locationDistanceString).font(.headline)
+                Text(eventPageViewModel.distanceConstant)
                     .font(.footnote)
                     .foregroundColor(.gray.opacity(0.8))
             }.padding()

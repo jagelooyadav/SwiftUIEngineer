@@ -41,6 +41,8 @@ class EventPageViewModel: ObservableObject {
     @Published var locationHeading: String = "Katara Cultural Village Main Art Center"
     @Published var locationDescriptionString: String = "AI Gassar, Doha"
     @Published var locationDistanceString: String = "2.9"
+    @Published var tagsHeading: String = "Tags"
+    let distanceConstant = "Km Away"
     
     init() {
         initialiseTags()

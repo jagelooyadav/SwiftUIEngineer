@@ -15,6 +15,7 @@ class HomePageViewModel: ObservableObject {
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
     @Published var isDataLoaded: Bool = false
+    let title = "Home Page"
     
     private var cancellable = Set<AnyCancellable>()
 
