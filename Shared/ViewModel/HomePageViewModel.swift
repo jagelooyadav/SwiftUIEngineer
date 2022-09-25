@@ -14,6 +14,7 @@ class HomePageViewModel: ObservableObject {
     @Published var rows: [ListRowViewModel] = []
     @Published var selectedRowId: Int = -1
     @Published var isNavigationActive: Bool = false
+    @Published var isDataLoaded: Bool = false
     
     private var cancellable = Set<AnyCancellable>()
 
@@ -50,10 +51,12 @@ extension HomePageViewModel {
                     
                     break
                 case .failure(let error):
+                    self.isDataLoaded = false
                     print(error.localizedDescription)
                 }
             }, receiveValue: { data in
                 parse(data: data)
+                self.isDataLoaded = true
             }).store(in: &cancellable)
     }
 }

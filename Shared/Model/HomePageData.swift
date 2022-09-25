@@ -20,7 +20,7 @@ public struct ListRow: Decodable, Hashable {
     
     public var dateString: String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "DD MMM yyyy HH:mm"
+        dateFormatter.dateFormat = "dd MMM yyyy"
         return dateFormatter.string(from: created_at)
     }
 }
