@@ -14,7 +14,7 @@ struct EventPage: View {
 
     var body: some View {
         ZStack {
-            Color.background
+            Color.background.ignoresSafeArea()
             ScrollView {
                 VStack {
                     createLocationView().padding(.top, .small)

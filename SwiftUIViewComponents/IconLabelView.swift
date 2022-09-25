@@ -26,7 +26,7 @@ public struct IconLabelView: View {
     public var body: some View {
         ZStack {
             Color.white
-            HStack(spacing: Padding.small.rawValue) {
+            HStack(alignment: .top, spacing: Padding.small.rawValue) {
                 if let iconImage = iconImage {
                     iconImage.font(titleProperties.font)
                 }

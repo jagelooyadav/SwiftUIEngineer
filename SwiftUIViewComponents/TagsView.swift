@@ -20,19 +20,16 @@ public struct TagsView: View {
     
     public var tags: [TagItem]
     
-    @ObservedObject private var sizeMapping = SizeMapping.shared
-    
     @State var componentheight: CGFloat = 40.0
     
     public init(title: String? = nil, tags: [TagItem], onTagSelect: ((TagItem) -> Void)? = nil) {
         self.tags = tags
         self.title = title
-        SizeMapping.shared.reset()
     }
     
     public func sizeToFit() -> some View {
         // To -Do: Needs to fix it
-        return frame(height: 120.0)
+        return frame(height: ceil(CGFloat(tags.count) / 3) * 50.0)
     }
     
     public var body: some View {
@@ -122,8 +119,6 @@ private struct CollectionTextItemsView<Data: Collection, Content: View>: View wh
             } else {
                 currentRow = currentRow + 1
                 rows.append([element])
-                SizeMapping.shared.tagsHeight = SizeMapping.tagHeight * CGFloat(rows.count)
-                print("Fit == \(rows.count)")
                 remainingWidth = availableWidth
             }
             
@@ -156,14 +151,5 @@ struct Previews_TagsView_Previews: PreviewProvider {
         let data = ["Shopping", "Food", "Sports", "Fan Zones", "Movies", "Historical", "World Cup 2022 Matches"]
         
         TagsView(title: "Tags", tags: data.map { TagItem(tagText: $0)})
-    }
-}
-
-private class SizeMapping: ObservableObject {
-    static let shared = SizeMapping()
-    @Published var tagsHeight: CGFloat = 40.0
-    static let tagHeight: CGFloat = 40.0
-    func reset() {
-        tagsHeight = 40.0
     }
 }

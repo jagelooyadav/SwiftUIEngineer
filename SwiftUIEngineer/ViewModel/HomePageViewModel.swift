@@ -37,6 +37,7 @@ extension HomePageViewModel {
         
         func parse(data: HomePageData) {
             DispatchQueue.main.async {
+                self.isDataLoaded = true
                 self.rows.removeAll()
                 for (index, row) in data.results.enumerated() {
                     self.rows.append(ListRowViewModel(rowId: index, rowData: row))
@@ -56,7 +57,6 @@ extension HomePageViewModel {
                 }
             }, receiveValue: { data in
                 parse(data: data)
-                self.isDataLoaded = true
             }).store(in: &cancellable)
     }
 }
