@@ -37,6 +37,7 @@ struct EventPage: View {
                         TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)
                     }
                 }.interactiveDismissDisabled(true)
+                    .padding(.bottom, 20.0)
                 
                 VStack {
                     Spacer()
@@ -114,7 +115,8 @@ struct EventPage: View {
                                           paddingTop: Padding.standard.rawValue,
                                           shape: Rectangle(), color: Color.white))
             .cornerRadius(20, corners: [.topLeft, .topRight])
-            .padding([.bottom, .leading, .trailing], 0.0)
+            .padding([.bottom, .leading, .trailing], 5.0)
+            .shadow(color: .gray, radius: 5.0)
     }
 
 }

@@ -21,7 +21,7 @@ public extension String {
     }
     
     static var phoneFill: String {
-        "phone"
+        "phone.fill"
     }
     
     static var star: String {

@@ -26,6 +26,7 @@ public struct CircledIconButton: View {
         Image(systemName: icon)
             .foregroundColor(.white)
             .modifier(BackgroundModifierView(shape: Circle(), color: color))
+            .font(.body)
     }
 }
 
