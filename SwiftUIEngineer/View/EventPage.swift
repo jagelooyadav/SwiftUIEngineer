@@ -98,7 +98,7 @@ struct EventPage: View {
     private func createLayourView() -> some View {
         HStack() {
             Spacer()
-            CircledIconButton(icon: "arrowshape.turn.up.forward",
+            CircledIconButton(icon: "arrowshape.turn.up.forward.ill",
                               color: Color(red: 108.0/255.0, green: 184.0/255.0, blue: 176.0/255.0),
                               action: nil)
             CircledIconButton(icon: .star,

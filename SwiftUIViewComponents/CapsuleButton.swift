@@ -31,8 +31,8 @@ public struct CapsuleButton: View {
                 }
             }.modifier(BackgroundModifierView(padingLeading: Padding.standard.rawValue,
                                               padingTrailing: Padding.standard.rawValue,
-                                              paddingTop: Padding.extraSmall.rawValue,
-                                              paddingBottom: Padding.extraSmall.rawValue,
+                                              paddingTop: Padding.small.rawValue,
+                                              paddingBottom: Padding.small.rawValue,
                                               shape: Capsule(), color: Color(red: 71.0/255.0, green: 168.0/255.0, blue: 222.0/255.0)))
         }
     }

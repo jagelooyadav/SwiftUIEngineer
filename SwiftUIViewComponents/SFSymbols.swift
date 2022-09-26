@@ -25,6 +25,6 @@ public extension String {
     }
     
     static var star: String {
-        "star"
+        "star.fill"
     }
 }
