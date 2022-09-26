@@ -37,7 +37,7 @@ struct EventPage: View {
                         TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)
                         Spacer()
                     }
-                }
+                }.interactiveDismissDisabled(true)
             }.navigationCustomTitle(eventPageViewModel.title)
                 .backActionView {
                     cancel()
