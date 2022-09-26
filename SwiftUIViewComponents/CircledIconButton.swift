@@ -16,7 +16,7 @@ public struct CircledIconButton: View {
     private let action: (() -> Void)?
     private let icon: String
     
-    init(icon: String = "star", color: Color = .red, action: (() -> Void)?) {
+    public init(icon: String = "star", color: Color = .red, action: (() -> Void)?) {
         self.color = color
         self.action = action
         self.icon = icon

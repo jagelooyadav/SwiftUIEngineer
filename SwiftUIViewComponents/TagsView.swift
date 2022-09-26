@@ -54,6 +54,7 @@ public struct TagsView: View {
                             
                             Text(verbatim: item.tagText)
                                 .font(.footnote)
+                                .foregroundColor(.white)
                                 .padding(.all, Padding.extraSmall)
                                 .modifier(BackgroundModifierView(shape: Capsule(), color: item.color))
                                 .onTapGesture {

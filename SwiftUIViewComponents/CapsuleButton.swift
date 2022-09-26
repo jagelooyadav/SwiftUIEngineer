@@ -25,7 +25,7 @@ public struct CapsuleButton: View {
             Button(action: { self.action?() }) {
                 HStack(spacing: 5.0) {
                     if let icon = icon {
-                        icon
+                        icon.foregroundColor(.white)
                     }
                     Text(text).foregroundColor(Color.white)
                 }

@@ -35,9 +35,13 @@ struct EventPage: View {
                         }
                         
                         TitleDiscriptionView(title: eventPageViewModel.howToReachHeading, content: eventPageViewModel.howToReachDescription)
-                        Spacer()
                     }
                 }.interactiveDismissDisabled(true)
+                
+                VStack {
+                    Spacer()
+                    createLayourView().padding(.bottom, 0.0)
+                }
             }.navigationCustomTitle(eventPageViewModel.title)
                 .backActionView {
                     cancel()
@@ -88,6 +92,24 @@ struct EventPage: View {
             }.padding()
             .fixedSize(horizontal: false, vertical: true)
         }.modifier(BackgroundModifierView(shape: Rectangle(), color: .white))
+    }
+    
+    private func createLayourView() -> some View {
+        HStack() {
+            Spacer()
+            CircledIconButton(icon: "arrowshape.turn.up.forward",
+                              color: Color(red: 108.0/255.0, green: 184.0/255.0, blue: 176.0/255.0),
+                              action: nil)
+            CircledIconButton(icon: .star, action: nil)
+            CircledIconButton(icon: .phoneFill,action: nil)
+            CapsuleButton(icon: Image(systemName: .star), text: "Direction")
+            Spacer()
+        }.modifier(BackgroundModifierView(padingLeading: Padding.standard.rawValue,
+                                          padingTrailing: Padding.standard.rawValue,
+                                          paddingTop: Padding.standard.rawValue,
+                                          shape: Rectangle(), color: Color.white))
+            .cornerRadius(20, corners: [.topLeft, .topRight])
+            .padding([.bottom, .leading, .trailing], 0.0)
     }
 
 }

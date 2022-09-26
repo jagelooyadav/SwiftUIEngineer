@@ -19,4 +19,12 @@ public extension String {
     static var chevronLeft: String {
         "chevron.left"
     }
+    
+    static var phoneFill: String {
+        "phone.fill"
+    }
+    
+    static var star: String {
+        "star"
+    }
 }
