@@ -43,6 +43,7 @@ class EventPageViewModel: ObservableObject {
     @Published var locationDistanceString: String = "2.9"
     @Published var tagsHeading: String = "Tags"
     let distanceConstant = "Km Away"
+    let directionButtonTitle = "Direction"
     
     init() {
         initialiseTags()

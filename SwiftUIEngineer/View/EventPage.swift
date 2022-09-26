@@ -95,6 +95,9 @@ struct EventPage: View {
         }.modifier(BackgroundModifierView(shape: Rectangle(), color: .white))
     }
     
+    // To-Do - Seems like SFSymbols giving unexpected behaviour in scroll. needs to fix disappearing one
+    //https://stackoverflow.com/questions/70161049/swiftui-odd-animation-behavior-with-systemimage
+    
     private func createLayourView() -> some View {
         HStack() {
             Spacer()
@@ -108,7 +111,7 @@ struct EventPage: View {
             CircledIconButton(icon: .phoneFill, color: Color(red: 174.0/255.0, green: 118.0/255.0,
                                                              blue: 218.0/255.0),
                               action: nil)
-            CapsuleButton(icon: Image(systemName: .star), text: "Direction")
+            CapsuleButton(icon: Image(systemName: .star), text:  eventPageViewModel.directionButtonTitle)
             Spacer()
         }.modifier(BackgroundModifierView(padingLeading: Padding.standard.rawValue,
                                           padingTrailing: Padding.standard.rawValue,
