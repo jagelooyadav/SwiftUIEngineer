@@ -117,7 +117,7 @@ struct EventPage: View {
                                           padingTrailing: Padding.standard.rawValue,
                                           paddingTop: Padding.standard.rawValue,
                                           shape: Rectangle(), color: Color.white))
-            .cornerRadius(20, corners: [.topLeft, .topRight])
+            .cornerRadius(40, corners: [.topLeft, .topRight])
             .padding([.bottom, .leading, .trailing], 5.0)
             .shadow(color: .gray, radius: 5.0)
     }
