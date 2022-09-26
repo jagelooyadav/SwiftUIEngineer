@@ -100,8 +100,13 @@ struct EventPage: View {
             CircledIconButton(icon: "arrowshape.turn.up.forward",
                               color: Color(red: 108.0/255.0, green: 184.0/255.0, blue: 176.0/255.0),
                               action: nil)
-            CircledIconButton(icon: .star, action: nil)
-            CircledIconButton(icon: .phoneFill,action: nil)
+            CircledIconButton(icon: .star,
+                              color: Color(red: 153.0/255.0, green: 157.0/255.0,
+                                           blue: 240.0/255.0),
+                              action: nil)
+            CircledIconButton(icon: .phoneFill, color: Color(red: 174.0/255.0, green: 118.0/255.0,
+                                                             blue: 218.0/255.0),
+                              action: nil)
             CapsuleButton(icon: Image(systemName: .star), text: "Direction")
             Spacer()
         }.modifier(BackgroundModifierView(padingLeading: Padding.standard.rawValue,
