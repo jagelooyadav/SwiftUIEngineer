@@ -14,14 +14,16 @@ public struct CircledIconButton: View {
     
     private let color: Color
     private let action: (() -> Void)?
+    private let icon: String
     
-    init(color: Color = .red, action: (() -> Void)?) {
+    init(icon: String = "star", color: Color = .red, action: (() -> Void)?) {
         self.color = color
         self.action = action
+        self.icon = icon
     }
     
     public var body: some View {
-        Image(systemName: "star")
+        Image(systemName: icon)
             .foregroundColor(.white)
             .modifier(BackgroundModifierView(shape: Circle(), color: color))
     }
