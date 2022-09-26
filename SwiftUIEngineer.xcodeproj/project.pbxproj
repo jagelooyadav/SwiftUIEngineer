@@ -15,6 +15,7 @@
 		AE3E47F828E04188005C355C /* ListRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F328E0411C005C355C /* ListRowViewModelTests.swift */; };
 		AE3E47FA28E05077005C355C /* DetailPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47F928E05077005C355C /* DetailPageViewModelTests.swift */; };
 		AE3E47FC28E05307005C355C /* EventPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E47FB28E05307005C355C /* EventPageViewModelTests.swift */; };
+		AEB0AC8A28E13E0D00B8C321 /* CircledIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB0AC8928E13E0D00B8C321 /* CircledIconButton.swift */; };
 		AEDFC1B828E078F2008EA5E8 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1A828E078F2008EA5E8 /* DetailPageViewModel.swift */; };
 		AEDFC1B928E078F2008EA5E8 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1A928E078F2008EA5E8 /* HomePageViewModel.swift */; };
 		AEDFC1BA28E078F2008EA5E8 /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFC1AA28E078F2008EA5E8 /* ListRowViewModel.swift */; };
@@ -130,6 +131,7 @@
 		AE3E47F428E0411C005C355C /* HomePageViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewModelTests.swift; sourceTree = "<group>"; };
 		AE3E47F928E05077005C355C /* DetailPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPageViewModelTests.swift; path = SwiftUIEngineerTests/DetailPageViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		AE3E47FB28E05307005C355C /* EventPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewModelTests.swift; sourceTree = "<group>"; };
+		AEB0AC8928E13E0D00B8C321 /* CircledIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircledIconButton.swift; sourceTree = "<group>"; };
 		AEDFC1A828E078F2008EA5E8 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
 		AEDFC1A928E078F2008EA5E8 /* HomePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		AEDFC1AA28E078F2008EA5E8 /* ListRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				AE3E47DA28DF9668005C355C /* IconLabelView.swift */,
 				AE3E47DC28DF9765005C355C /* LabelProperties.swift */,
 				AEDFC1C528E07FDC008EA5E8 /* SFSymbols.swift */,
+				AEB0AC8928E13E0D00B8C321 /* CircledIconButton.swift */,
 			);
 			path = SwiftUIViewComponents;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				AE3E47DB28DF9668005C355C /* IconLabelView.swift in Sources */,
 				AE3E47D728DF89D0005C355C /* TitleDescriptionView.swift in Sources */,
 				AEF3CA4C28DEF33900506492 /* BackgroundModifierView.swift in Sources */,
+				AEB0AC8A28E13E0D00B8C321 /* CircledIconButton.swift in Sources */,
 				AEF3CAA928DF27DE00506492 /* TagsView.swift in Sources */,
 				AEF3CA0128DB23DC00506492 /* View+NavigationTitle.swift in Sources */,
 				AEDFC1C628E07FDC008EA5E8 /* SFSymbols.swift in Sources */,

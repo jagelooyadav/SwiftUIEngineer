@@ -19,8 +19,8 @@ public struct BackgroundModifierView<Shape: InsettableShape>: ViewModifier {
     
     public init(padingLeading: CGFloat = Padding.small.rawValue,
                 padingTrailing: CGFloat = Padding.small.rawValue,
-                paddingTop: CGFloat = 0.0,
-                paddingBottom: CGFloat = 0.0,
+                paddingTop: CGFloat = Padding.small.rawValue,
+                paddingBottom: CGFloat = Padding.small.rawValue,
                 maxWidth: CGFloat? = nil,
                 shape: Shape,
                 color: Color) {
